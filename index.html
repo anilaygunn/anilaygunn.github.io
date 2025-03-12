@@ -127,6 +127,18 @@
                             </a>
                         </div>
                     </div>
+                     <div class="p-4">
+                            <h3 class="text-xl font-bold mb-2">Keystone Game</h3>
+                            <p class="text-gray-400 mb-4">This is a keystone game</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="px-2 py-1 text-xs rounded bg-indigo-900 text-indigo-300">Python</span>
+                            </div>
+                            <a href="https://github.com/anilaygunn/Albums" target="_blank" 
+                               class="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors duration-200">
+                                <i class="fab fa-github mr-2"></i> View Project
+                            </a>
+                        </div>
+                    </div>
                 </div>
                  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Project Card -->
@@ -149,38 +161,5 @@
             </section>
         </div>
     </main>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script>
-        // Improved filtering function
-        document.addEventListener('DOMContentLoaded', function() {
-            const filterButtons = document.querySelectorAll('.filter-btn');
-            const projectCards = document.querySelectorAll('.project-card');
-
-            filterButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const category = this.dataset.category;
-                    
-                    // Update button styles
-                    filterButtons.forEach(btn => {
-                        btn.classList.remove('bg-indigo-600');
-                        btn.classList.add('bg-gray-700');
-                    });
-                    this.classList.remove('bg-gray-700');
-                    this.classList.add('bg-indigo-600');
-
-                    // Filter projects
-                    projectCards.forEach(card => {
-                        if (category === 'all' || card.dataset.category === category) {
-                            card.style.display = 'block';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    });
-                });
-            });
-        });
-
-    </script>
 </body>
 </html>
