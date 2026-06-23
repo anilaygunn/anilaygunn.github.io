@@ -1,268 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Anıl Aygün - Portfolio</title>
+    <title>Anıl Aygün — iOS & Mobile Engineer</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Anıl Aygün — iOS & Cross-Platform Mobile Engineer. Swift, SwiftUI, React Native, Flutter.">
+    <link rel="icon" type="image/png" href="formaliben.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        /* Fix for sidebar height and scrolling */
-        body {
-            overflow-x: hidden;
-        }
-        .sidebar-fixed {
-            height: 100vh;
-            position: fixed;
-            overflow-y: auto;
-        }
-        /* Fix for gradient border */
-        .gradient-border {
-            position: relative;
-        }
-        .gradient-border::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 2px;
-            background: linear-gradient(to right, #4f46e5, #06b6d4);
-        }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; }
+        .fade-up { animation: fadeUp .6s ease both; }
+        @keyframes fadeUp { from { opacity:0; transform: translateY(12px);} to { opacity:1; transform: translateY(0);} }
+        ::selection { background: #111827; color: #fff; }
     </style>
 </head>
-<body class="bg-gray-900 text-gray-100">
-    <!-- Sidebar - Fixed positioning fix -->
-    <aside class="sidebar-fixed w-64 z-40 transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
-        <div class="h-full px-3 py-4 overflow-y-auto bg-gray-800 border-r border-gray-700">
-            <div class="flex flex-col items-center mb-8 pt-4">
-                <img src="Anıl Aygün 5x5.JPG" class="w-24 h-24 rounded-full border-2 border-indigo-500 p-1 hover:scale-105 transition-transform duration-300" alt="Profile Image">
-                <h2 class="text-xl font-bold mt-4">Anıl Aygün</h2>
-                <p class="text-gray-400">Software Developer</p>
-                
-                <!-- Skill Tags -->
-                <div class="flex flex-wrap gap-2 mt-4">
-                    <span class="px-3 py-1 text-xs rounded-full bg-indigo-900 text-indigo-300">Python</span>
-                    <span class="px-3 py-1 text-xs rounded-full bg-cyan-900 text-cyan-300">Java</span>
-                    <span class="px-3 py-1 text-xs rounded-full bg-purple-900 text-purple-300">Swift</span>
-                    <span class="px-3 py-1 text-xs rounded-full bg-indigo-900 text-indigo-300">API Integration</span>
-                    <span class="px-3 py-1 text-xs rounded-full bg-indigo-900 text-indigo-300">MVVM</span>
-                    <span class="px-3 py-1 text-xs rounded-full bg-cyan-900 text-cyan-300">SwiftData</span>
-                    <span class="px-3 py-1 text-xs rounded-full bg-cyan-900 text-cyan-300">PostgreSQL</span>
-                    <span class="px-3 py-1 text-xs rounded-full bg-purple-900 text-purple-300">Machine Learning</span>
-                    <span class="px-3 py-1 text-xs rounded-full bg-indigo-900 text-indigo-300">Python</span>
+<body class="bg-[#fafaf9] text-slate-800 antialiased">
 
+    <!-- Nav -->
+    <header class="fixed top-0 inset-x-0 z-50 bg-[#fafaf9]/80 backdrop-blur border-b border-slate-200">
+        <nav class="max-w-3xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-semibold tracking-tight text-slate-900">Anıl Aygün</a>
+            <div class="hidden sm:flex items-center gap-8 text-sm text-slate-500">
+                <a href="#about" class="hover:text-slate-900 transition-colors">About</a>
+                <a href="#experience" class="hover:text-slate-900 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-slate-900 transition-colors">Projects</a>
+                <a href="#contact" class="hover:text-slate-900 transition-colors">Contact</a>
+            </div>
+            <div class="flex items-center gap-4 text-slate-500">
+                <a href="https://github.com/anilaygunn" target="_blank" rel="noopener" class="hover:text-slate-900 transition-colors"><i class="fab fa-github text-lg"></i></a>
+                <a href="https://www.linkedin.com/in/an%C4%B1l-ayg%C3%BCn-50a6b9219/" target="_blank" rel="noopener" class="hover:text-slate-900 transition-colors"><i class="fab fa-linkedin text-lg"></i></a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-6 pt-32 pb-24">
+
+        <!-- Hero -->
+        <section class="fade-up">
+            <div class="flex items-center gap-5 mb-8">
+                <img src="Anıl Aygün 5x5.JPG" alt="Anıl Aygün" class="w-16 h-16 rounded-full object-cover ring-1 ring-slate-200">
+                <div>
+                    <h1 class="text-2xl font-bold text-slate-900 tracking-tight">Anıl Aygün</h1>
+                    <p class="text-slate-500">iOS & Cross-Platform Mobile Engineer</p>
                 </div>
             </div>
+            <p class="text-lg leading-relaxed text-slate-600">
+                I build native iOS and cross-platform mobile apps with Swift, SwiftUI, React Native and Flutter —
+                from architecture and API integrations to App Store releases. Currently a Mobile Engineer at
+                <span class="text-slate-900 font-medium">Apprel.ai</span> in Luxembourg.
+            </p>
+            <div class="flex flex-wrap gap-3 mt-6">
+                <a href="mailto:anlaygun1@gmail.com" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-900 text-white text-sm font-medium hover:bg-slate-700 transition-colors">
+                    <i class="fa-regular fa-envelope"></i> Get in touch
+                </a>
+                <a href="https://github.com/anilaygunn" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-300 text-sm font-medium text-slate-700 hover:border-slate-400 transition-colors">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/an%C4%B1l-ayg%C3%BCn-50a6b9219/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-slate-300 text-sm font-medium text-slate-700 hover:border-slate-400 transition-colors">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </section>
 
-            <ul class="space-y-2 font-medium">
-                <li>
-                    <a href="#projects" class="flex items-center p-3 text-gray-300 rounded-lg hover:bg-gray-700 group transition-colors duration-200">
-                        <i class="fas fa-project-diagram w-5 h-5 text-indigo-400"></i>
-                        <span class="ml-3">Projects</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#about" class="flex items-center p-3 text-gray-300 rounded-lg hover:bg-gray-700 group transition-colors duration-200">
-                        <i class="fas fa-user w-5 h-5 text-indigo-400"></i>
-                        <span class="ml-3">About</span>
-                    </a>
-                </li>
-            </ul>
+        <!-- About -->
+        <section id="about" class="mt-24 scroll-mt-24">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-4">About</h2>
+            <p class="text-slate-600 leading-relaxed">
+                Computer Engineering graduate with professional experience in native iOS and cross-platform mobile
+                development. Hands-on with mobile architecture, REST API integrations, Firebase and App Store
+                deployments, having built and published production-ready apps in international startup
+                environments. A Work and Travel program in the US sharpened my communication and adaptability,
+                working across industries with people from different backgrounds. I'm passionate about scalable
+                mobile products and continuously expanding into backend technologies and cloud infrastructure.
+            </p>
+        </section>
 
-            <!-- Social Links - Fixed positioning -->
-            <div class="mt-8 pb-4">
-                <div class="flex justify-center space-x-4">
-                    <a href="https://github.com/anilaygunn" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-200">
-                        <i class="fab fa-github text-xl"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/an%C4%B1l-ayg%C3%BCn-50a6b9219/" target="_blank" class="text-gray-400 hover:text-white transition-colors duration-200">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
+        <!-- Experience -->
+        <section id="experience" class="mt-20 scroll-mt-24">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-6">Experience</h2>
+            <div class="space-y-8">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+                    <div>
+                        <h3 class="font-semibold text-slate-900">Apprel.ai</h3>
+                        <p class="text-slate-500 text-sm">Jnr. Mobile Engineer (iOS & Cross-Platform) · Luxembourg</p>
+                    </div>
+                    <span class="text-sm text-slate-400 whitespace-nowrap">Feb 2026 – Present</span>
+                </div>
+                <ul class="list-disc list-outside ml-5 text-slate-600 text-sm space-y-1.5 leading-relaxed">
+                    <li>Develop native iOS features using Swift and SwiftUI, building and maintaining core app screens and components.</li>
+                    <li>Contribute to the migration of the existing iOS application to React Native, ensuring functional parity and cross-platform compatibility.</li>
+                    <li>Integrate REST APIs, Firebase Authentication and Firestore across the mobile application.</li>
+                    <li>Collaborate closely with product and design teams to deliver new mobile features on schedule.</li>
+                </ul>
+
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1 pt-4">
+                    <div>
+                        <h3 class="font-semibold text-slate-900">Mavidna</h3>
+                        <p class="text-slate-500 text-sm">Jnr. Mobile Engineer (Cross-Platform) · Istanbul, Türkiye</p>
+                    </div>
+                    <span class="text-sm text-slate-400 whitespace-nowrap">Mar 2025 – Nov 2025</span>
+                </div>
+                <ul class="list-disc list-outside ml-5 text-slate-600 text-sm space-y-1.5 leading-relaxed">
+                    <li>Built a production-ready field operations app for agricultural businesses across Turkey, using Flutter (Dart) with MVVM and MobX.</li>
+                    <li>Integrated Google Maps with reverse geocoding for real-time location tracking and dynamic field assignment.</li>
+                    <li>Implemented RESTful API integration with cascaded region-selection dropdowns and native iOS/Android permission modules.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="mt-20 scroll-mt-24">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-6">Projects</h2>
+            <div class="grid sm:grid-cols-2 gap-4">
+
+                <a href="https://apps.apple.com/tr/app/farm-track-tarla-takibi/id6781450090" target="_blank" rel="noopener" class="group p-5 rounded-xl border border-slate-200 hover:border-slate-300 hover:shadow-sm transition-all bg-white">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-semibold text-slate-900">Farm Track</h3>
+                        <i class="fa-solid fa-arrow-up-right-from-square text-slate-300 group-hover:text-slate-500 text-xs"></i>
+                    </div>
+                    <p class="text-sm text-slate-500 leading-relaxed">Native iOS app for farmers to manage irrigation, fertilization and harvest. SwiftUI + Clean Architecture, SwiftData/CloudKit sync, and on-device Apple Intelligence for crop recommendations. Published on the App Store.</p>
+                    <div class="flex flex-wrap gap-1.5 mt-3">
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">SwiftUI</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">SwiftData</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">CloudKit</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">Apple Intelligence</span>
+                    </div>
+                </a>
+
+                <div class="group p-5 rounded-xl border border-slate-200 hover:border-slate-300 hover:shadow-sm transition-all bg-white">
+                    <h3 class="font-semibold text-slate-900 mb-2">BopSpot</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Location-based social app for music lovers to discover and connect with nearby users. Real-time messaging and live feed via WebSocket, CoreLocation-based discovery, Spotify API integration.</p>
+                    <div class="flex flex-wrap gap-1.5 mt-3">
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">SwiftUI</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">MVVM</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">WebSocket</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">CoreLocation</span>
+                    </div>
+                </div>
+
+                <a href="https://github.com/anilaygunn/newListBridge" target="_blank" rel="noopener" class="group p-5 rounded-xl border border-slate-200 hover:border-slate-300 hover:shadow-sm transition-all bg-white">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-semibold text-slate-900">ListBridge</h3>
+                        <i class="fab fa-github text-slate-300 group-hover:text-slate-500"></i>
+                    </div>
+                    <p class="text-sm text-slate-500 leading-relaxed">Cross-platform playlist migration between Spotify and Apple Music. Independent OAuth 2.0 flows for both platforms, full transfer pipeline with track matching, metadata mapping and error handling, backed by Terraform-provisioned AWS infrastructure.</p>
+                    <div class="flex flex-wrap gap-1.5 mt-3">
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">Swift</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">TypeScript</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">OAuth 2.0</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">AWS</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/anilaygunn/sayItAlarm-backend" target="_blank" rel="noopener" class="group p-5 rounded-xl border border-slate-200 hover:border-slate-300 hover:shadow-sm transition-all bg-white">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-semibold text-slate-900">SayIt Alarm — Backend</h3>
+                        <i class="fab fa-github text-slate-300 group-hover:text-slate-500"></i>
+                    </div>
+                    <p class="text-sm text-slate-500 leading-relaxed">Backend for a custom alarm app that lets users upload audio or use AI-generated voices. Integrated ElevenLabs text-to-speech, with audio storage, alarm scheduling and sound management.</p>
+                    <div class="flex flex-wrap gap-1.5 mt-3">
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">Node.js</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">TypeScript</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">ElevenLabs API</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/anilaygunn/Swift-Dojo" target="_blank" rel="noopener" class="group p-5 rounded-xl border border-slate-200 hover:border-slate-300 hover:shadow-sm transition-all bg-white">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-semibold text-slate-900">Swift Dojo</h3>
+                        <i class="fab fa-github text-slate-300 group-hover:text-slate-500"></i>
+                    </div>
+                    <p class="text-sm text-slate-500 leading-relaxed">A Swift interview-prep platform built from scratch, with a question bank spanning fundamentals, memory management, concurrency, SwiftUI and UIKit. Live at swift-dojo.com.</p>
+                    <div class="flex flex-wrap gap-1.5 mt-3">
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">Full-stack</span>
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">Swift</span>
+                    </div>
+                </a>
+
+                <a href="https://github.com/anilaygunn/FlashCard-Creator" target="_blank" rel="noopener" class="group p-5 rounded-xl border border-slate-200 hover:border-slate-300 hover:shadow-sm transition-all bg-white">
+                    <div class="flex items-center justify-between mb-2">
+                        <h3 class="font-semibold text-slate-900">FlashCard Creator</h3>
+                        <i class="fab fa-github text-slate-300 group-hover:text-slate-500"></i>
+                    </div>
+                    <p class="text-sm text-slate-500 leading-relaxed">A SwiftUI app to import, manage and merge flashcard decks, with interactive study sessions, progress tracking and detailed statistics.</p>
+                    <div class="flex flex-wrap gap-1.5 mt-3">
+                        <span class="text-xs px-2 py-0.5 rounded bg-slate-100 text-slate-600">SwiftUI</span>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section class="mt-20">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-6">Skills</h2>
+            <div class="space-y-3 text-sm">
+                <div class="flex flex-col sm:flex-row sm:gap-3">
+                    <span class="text-slate-400 sm:w-32 shrink-0">Languages</span>
+                    <span class="text-slate-700">Swift, TypeScript, JavaScript, Dart, Python, Go</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:gap-3">
+                    <span class="text-slate-400 sm:w-32 shrink-0">Mobile</span>
+                    <span class="text-slate-700">SwiftUI, UIKit, React Native, Flutter</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:gap-3">
+                    <span class="text-slate-400 sm:w-32 shrink-0">Architecture</span>
+                    <span class="text-slate-700">MVVM, MVC, Clean Architecture, MobX</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:gap-3">
+                    <span class="text-slate-400 sm:w-32 shrink-0">Backend & Cloud</span>
+                    <span class="text-slate-700">Node.js, REST APIs, OAuth 2.0, WebSocket, AWS, Terraform, Kafka</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:gap-3">
+                    <span class="text-slate-400 sm:w-32 shrink-0">Data</span>
+                    <span class="text-slate-700">Firebase, CloudKit, SwiftData, PostgreSQL, Supabase</span>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:gap-3">
+                    <span class="text-slate-400 sm:w-32 shrink-0">Tools</span>
+                    <span class="text-slate-700">Xcode, Git, Google Maps SDK, App Store Connect, ElevenLabs API</span>
                 </div>
             </div>
-        </div>
-    </aside>
+        </section>
 
-    <!-- Main Content - Fixed margin and responsive padding -->
-    <main class="p-4 sm:ml-64 min-h-screen">
-        <div class="p-4 rounded-lg">
-            <!-- Projects Section -->
-            <section id="projects" class="mb-12">
-                <h2 class="text-3xl font-bold mb-6 text-white gradient-border inline-block">Projects</h2>
-                
-                <!-- Project Grid - Added data attributes for filtering -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Project Card -->
-                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700" data-category="ml">
-                        <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">Neural Network</h3>
-                            <p class="text-gray-400 mb-4">A neural network implementation for pattern recognition and classification tasks.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 text-xs rounded bg-indigo-900 text-indigo-300">Java</span>
-                                <span class="px-2 py-1 text-xs rounded bg-blue-900 text-blue-300">Machine Learning</span>
-                            </div>
-                            <a href="https://github.com/anilaygunn/Basic-Neural-Network" target="_blank" 
-                               class="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors duration-200">
-                                <i class="fab fa-github mr-2"></i> View Project
-                            </a>
-                        </div>
+        <!-- Education -->
+        <section class="mt-20">
+            <h2 class="text-sm font-semibold uppercase tracking-wider text-slate-400 mb-6">Education</h2>
+            <div class="space-y-5">
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+                    <div>
+                        <h3 class="font-semibold text-slate-900">Ege University</h3>
+                        <p class="text-slate-500 text-sm">Computer Engineering · Izmir, Türkiye · GPA 3.58/4.00</p>
                     </div>
-                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700" data-category="ml">
-                        <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">Flags</h3>
-                            <p class="text-gray-400 mb-4">This is a basic flag Swift beginner project.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 text-xs rounded bg-indigo-900 text-indigo-300">Swift</span>
-                                <span class="px-2 py-1 text-xs rounded bg-blue-900 text-blue-300">UIKit</span>
-                            </div>
-                            <a href="https://github.com/anilaygunn/Flags" target="_blank" 
-                               class="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors duration-200">
-                                <i class="fab fa-github mr-2"></i> View Project
-                            </a>
-                        </div>
-                    </div>
+                    <span class="text-sm text-slate-400 whitespace-nowrap">2021 – 2026</span>
                 </div>
-                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Project Card -->
-                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700" data-category="ml">
-                        <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">Spotify Top Albums</h3>
-                            <p class="text-gray-400 mb-4">A project that users can find top albums for any spotify artist.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 text-xs rounded bg-indigo-900 text-indigo-300">Python</span>
-                                <span class="px-2 py-1 text-xs rounded bg-blue-900 text-blue-300">API Integration</span>
-                            </div>
-                            <a href="https://github.com/anilaygunn/Albums" target="_blank" 
-                               class="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors duration-200">
-                                <i class="fab fa-github mr-2"></i> View Project
-                            </a>
-                        </div>
+                <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline gap-1">
+                    <div>
+                        <h3 class="font-semibold text-slate-900">Ulviye Matli Science High School</h3>
+                        <p class="text-slate-500 text-sm">Science Field · Bursa, Türkiye</p>
                     </div>
-                     <div class="project-card bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700" data-category="ml">
-                        <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">MusicTracker</h3>
-                            <p class="text-gray-400 mb-4">An ios app that Apple Music users can look for their daily listening rewind.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="px-2 py-1 text-xs rounded bg-indigo-900 text-indigo-300">SwiftUI</span>
-                                <span class="px-2 py-1 text-xs rounded bg-blue-900 text-blue-300">SwiftData</span>
-                                <span class="px-2 py-1 text-xs rounded bg-blue-900 text-blue-300">API Integration</span>
-                            </div>
-                            <a href="https://github.com/anilaygunn/MusicTracker" target="_blank" 
-                               class="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors duration-200">
-                                <i class="fab fa-github mr-2"></i> View Project
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Project Card -->
-                    <div class="project-card bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700" data-category="ml">
-                        <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">Bitcoin Guesser</h3>
-                            <p class="text-gray-400 mb-4">This project is for taking a guess about future bitcoin values..</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                 <span class="px-2 py-1 text-xs rounded bg-indigo-900 text-indigo-300"> Python</span>
-                                <span class="px-2 py-1 text-xs rounded bg-indigo-900 text-indigo-300">Machine Learning</span>
-                            </div>
-                            <a href="https://github.com/anilaygunn/Basic-Bitcoin-Guesser" target="_blank" 
-                               class="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors duration-200">
-                                <i class="fab fa-github mr-2"></i> View Project
-                            </a>
-                        </div>
-                    </div>
-                     <div class="project-card bg-gray-800 rounded-lg overflow-hidden hover:transform hover:scale-105 transition-all duration-300 border border-gray-700" data-category="ml">
-                        <div class="p-4">
-                            <h3 class="text-xl font-bold mb-2">Red Wine Quality Guesser</h3>
-                            <p class="text-gray-400 mb-4">This project is for learning red wines quality according to some requirements.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                 <span class="px-2 py-1 text-xs rounded bg-indigo-900 text-indigo-300"> Python</span>
-                                <span class="px-2 py-1 text-xs rounded bg-indigo-900 text-indigo-300"> NumPy</span>
-                                <span class="px-2 py-1 text-xs rounded bg-indigo-900 text-indigo-300"> Pandas</span>
-                                <span class="px-2 py-1 text-xs rounded bg-indigo-900 text-indigo-300"> Matplotlib</span>
-                                <span class="px-2 py-1 text-xs rounded bg-indigo-900 text-indigo-300">Machine Learning</span>
-                            </div>
-                            <a href="https://github.com/anilaygunn/RedWineQualityGuesser" target="_blank" 
-                               class="inline-flex items-center px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors duration-200">
-                                <i class="fab fa-github mr-2"></i> View Project
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-            </section>
-            <!-- Add this section right after your Projects section, inside the main content div -->
-<section id="about" class="mb-12 pt-8">
-    <h2 class="text-3xl font-bold mb-6 text-white gradient-border inline-block">About Me</h2>
-    
-    <div class="bg-gray-800 rounded-lg p-6 space-y-6">
-        <!-- Profile Section -->
-        <div class="flex flex-col md:flex-row gap-8 items-start">
-            <div class="w-full md:w-3/3">
-                <h2 class="text-2xl font-bold mb-4 text-indigo-400">Background</h2>
-                <p class="text-gray-300 leading-relaxed mb-4">
-                    I am Anil Aygun, a 21-year-old third-year student in the Computer Engineering Department at Ege University, with a GPA of 3.55. During my first year, I prioritized academic pursuits and my projects. In my second year, I gravitated towards machine learning and artificial intelligence, engaging in relevant topics. I undertook projects utilizing libraries such as NumPy, Pandas, and Matplotlib. Additionally, I participated in a work and travel program that provided me with experiences in a foreign country across varying work environments, enhancing my adaptability to diverse conditions. This academic year, I commenced my development in mobile technology, particularly within the iOS domain, by undertaking projects that integrate frameworks such as SwiftUI, UIKit, and SwiftData, in conjunction with API utilization.
-                <p class="text-gray-300 leading-relaxed">
-                    Currently focusing on iOS development with Swift and SwiftUI, while maintaining expertise in Python for machine learning projects.
-                </p>
-            </div>
-        </div>
-
-        <!-- Skills Section -->
-        <div class="mt-8">
-            <h2 class="text-2xl font-bold mb-4 text-indigo-400">Skills & Expertise</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <!-- Mobile Development -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-3">Mobile Development</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 text-sm rounded-full bg-indigo-900 text-indigo-300">Swift</span>
-                        <span class="px-3 py-1 text-sm rounded-full bg-indigo-900 text-indigo-300">SwiftUI</span>
-                        <span class="px-3 py-1 text-sm rounded-full bg-indigo-900 text-indigo-300">UIKit</span>
-                        <span class="px-3 py-1 text-sm rounded-full bg-indigo-900 text-indigo-300">SwiftData</span>
-                    </div>
-                </div>
-
-                <!-- Programming Languages -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-3">Programming Languages</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 text-sm rounded-full bg-cyan-900 text-cyan-300">Python</span>
-                        <span class="px-3 py-1 text-sm rounded-full bg-cyan-900 text-cyan-300">Java</span>
-                        <span class="px-3 py-1 text-sm rounded-full bg-cyan-900 text-cyan-300">Swift</span>
-                        <span class="px-3 py-1 text-sm rounded-full bg-cyan-900 text-cyan-300">C</span>
-                        
-                    </div>
-                </div>
-
-                <!-- Data Science -->
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <h3 class="text-xl font-semibold mb-3">Data Science</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1 text-sm rounded-full bg-purple-900 text-purple-300">Machine Learning</span>
-                        <span class="px-3 py-1 text-sm rounded-full bg-purple-900 text-purple-300">NumPy</span>
-                        <span class="px-3 py-1 text-sm rounded-full bg-purple-900 text-purple-300">Pandas</span>
-                    </div>
+                    <span class="text-sm text-slate-400 whitespace-nowrap">2017 – 2021</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <!-- Education & Experience -->
-        <div class="mt-8">
-            <h2 class="text-2xl font-bold mb-4 text-indigo-400">Education</h2>
-            <div class="space-y-4">
-                <div class="bg-gray-700 p-4 rounded-lg">
-                    <h3 class="text-xl font-semibold">Ege University</h3>
-                    <p class="text-gray-400">Computer Engineering • 2021 - 2026</p>
-                    <p class="text-gray-300 mt-2">Focused on software development, machine learning, and mobile application development.</p>
-                </div>
+        <!-- Contact -->
+        <section id="contact" class="mt-24 scroll-mt-24 text-center border-t border-slate-200 pt-16">
+            <h2 class="text-2xl font-bold text-slate-900 mb-3">Let's work together</h2>
+            <p class="text-slate-500 mb-6">Open to mobile engineering opportunities and interesting projects.</p>
+            <a href="mailto:anlaygun1@gmail.com" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-slate-900 text-white text-sm font-medium hover:bg-slate-700 transition-colors">
+                <i class="fa-regular fa-envelope"></i> anlaygun1@gmail.com
+            </a>
+            <div class="flex justify-center gap-6 mt-8 text-slate-400">
+                <a href="https://github.com/anilaygunn" target="_blank" rel="noopener" class="hover:text-slate-900 transition-colors"><i class="fab fa-github text-xl"></i></a>
+                <a href="https://www.linkedin.com/in/an%C4%B1l-ayg%C3%BCn-50a6b9219/" target="_blank" rel="noopener" class="hover:text-slate-900 transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
             </div>
-        </div>
-    </div>
-</section>
-        </div>
+        </section>
+
+        <footer class="text-center text-xs text-slate-400 mt-20">
+            © 2026 Anıl Aygün
+        </footer>
     </main>
+
 </body>
 </html>
